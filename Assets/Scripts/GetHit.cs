@@ -63,6 +63,7 @@ public class GetHit : MonoBehaviour
         hurt = true;
         playerMovementScript.adjustHealth(-1);
         Debug.Log($"Player health is now {playerMovementScript.playerStats.playerHealth}");
+        playerMovementScript.resetCoins();
         
         playerMovementScript.playerStats.canMove = false;
         playerMovementScript.soundManager.PlayHitSound();

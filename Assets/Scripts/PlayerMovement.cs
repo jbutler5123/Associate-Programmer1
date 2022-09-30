@@ -25,8 +25,11 @@ public class PlayerMovement : MonoBehaviour
         [Tooltip("When the player is allowed to jump or not.")]
         public bool canJump;
 
-        [Tooltip("When the player is allowed to jump or not.")]
+        [Tooltip("Player's health.")]
         public int playerHealth;
+
+        [Tooltip("# of coins collected since last hit (resets at 10 for +1 health).")]
+        public int coinsCollected;
     }
     
     public Stats playerStats;
@@ -46,10 +49,12 @@ public class PlayerMovement : MonoBehaviour
     private float moveX, moveY;
     private float facing;
     private Rigidbody rb;
+    private int playerHealthMax;
     
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerHealthMax=playerStats.playerHealth;
     }
 
     private void Update()
@@ -114,6 +119,23 @@ public class PlayerMovement : MonoBehaviour
     public void adjustHealth(int toAdjustHealth)
     {
         playerStats.playerHealth+= toAdjustHealth;
+    }
+
+    public void resetCoins()
+    {
+        playerStats.coinsCollected=0;
+    }
+
+    public void adjustCoins(int toAdjustCoins)
+    {
+        playerStats.coinsCollected+= toAdjustCoins;
+        Debug.Log($"Current coins is: {playerStats.coinsCollected}");
+        if (playerStats.coinsCollected>=10 && playerStats.playerHealth<playerHealthMax)
+        {
+            playerStats.playerHealth+=1;
+            resetCoins();
+            Debug.Log($"10 coins collected and 1 health added");
+        }
     }
 
 }

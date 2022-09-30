@@ -16,6 +16,7 @@ public class CollectCoins : MonoBehaviour
             playerMovementScript = other.GetComponent<PlayerMovement>();
             playerMovementScript.soundManager.PlayCoinSound();
             ScoreManager.score += 10;
+            playerMovementScript.adjustCoins(1);
             GameObject particles = Instantiate(coinParticles, transform.position, new Quaternion());
             Destroy(gameObject);
         }
