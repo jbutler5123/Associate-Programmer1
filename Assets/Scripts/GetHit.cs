@@ -6,6 +6,7 @@ public class GetHit : MonoBehaviour
 {
     [Tooltip("Determines when the player is taking damage.")]
     public bool hurt = false;
+    //public int playerHealth = 3;
 
     private bool slipping = false;
     private PlayerMovement playerMovementScript;
@@ -60,9 +61,18 @@ public class GetHit : MonoBehaviour
     private void TakeDamage()
     {
         hurt = true;
+        playerMovementScript.adjustHealth(-1);
+        Debug.Log($"Player health is now {playerMovementScript.playerStats.playerHealth}");
+        
         playerMovementScript.playerStats.canMove = false;
         playerMovementScript.soundManager.PlayHitSound();
+        if(playerMovementScript.playerStats.playerHealth==0)
+        {
+            gameOver();
+        }
+        else{
         StartCoroutine("Recover");
+        }
     }
     private IEnumerator Recover()
     {
@@ -70,4 +80,10 @@ public class GetHit : MonoBehaviour
         hurt = false;
         playerMovementScript.playerStats.canMove = true;
     }
+
+    private void gameOver()
+    {
+        Debug.Log("Game Over");
+    }
+
 }

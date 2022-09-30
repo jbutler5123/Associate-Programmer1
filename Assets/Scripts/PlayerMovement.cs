@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
         [Tooltip("When the player is allowed to jump or not.")]
         public bool canJump;
+
+        [Tooltip("When the player is allowed to jump or not.")]
+        public int playerHealth;
     }
     
     public Stats playerStats;
@@ -106,6 +109,11 @@ public class PlayerMovement : MonoBehaviour
         playerStats.canJump = false;
         soundManager.PlayJumpSound();
         rb.AddForce(Vector3.up * playerStats.jumpForce);
+    }
+
+    public void adjustHealth(int toAdjustHealth)
+    {
+        playerStats.playerHealth+= toAdjustHealth;
     }
 
 }
