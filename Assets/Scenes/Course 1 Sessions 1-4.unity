@@ -10354,7 +10354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 238474744}
-  m_LocalRotation: {x: -0.0020354858, y: 0.003524524, z: 0.0000071741774, w: 0.9999917}
+  m_LocalRotation: {x: -0.0020354886, y: 0.0035245256, z: 0.00000717419, w: 0.9999917}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15216,7 +15216,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680226749}
-  m_LocalRotation: {x: -0.0020354853, y: 0.0035245237, z: 0.0000071741756, w: 0.9999917}
+  m_LocalRotation: {x: -0.0020354877, y: 0.003524525, z: 0.000007174186, w: 0.9999917}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15928,7 +15928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &706923303
 Transform:
   m_ObjectHideFlags: 0
@@ -30902,7 +30902,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0020355163, y: -0.003524524, z: -0.000007174285, w: -0.9999917}
+  m_LocalRotation: {x: 0.0020355163, y: -0.0035245256, z: -0.000007174288, w: -0.9999917}
   m_LocalPosition: {x: -0.10573528, y: 2.5, z: -14.999627}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31155,7 +31155,6 @@ GameObject:
   - component: {fileID: 993006177}
   - component: {fileID: 993006176}
   - component: {fileID: 993006175}
-  - component: {fileID: 993006174}
   - component: {fileID: 993006173}
   m_Layer: 8
   m_Name: Enemy
@@ -31192,20 +31191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244e286be7c21174db35f2b699e96f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &993006174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993006171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774b006c16431684c9e27099c0883556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   enemyStats:
-    speed: 10
+    speed: 7
     move: 1
   patrolPoints:
   - {fileID: 589774718}
@@ -46900,7 +46887,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285456457}
-  m_LocalRotation: {x: 0.04981339, y: 0.0035201514, z: -0.00017556973, w: 0.99875236}
+  m_LocalRotation: {x: 0.04981339, y: 0.00352016, z: -0.00017557017, w: 0.99875236}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
