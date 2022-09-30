@@ -57,7 +57,7 @@ public class RefactorEnemy : MonoBehaviour
         // changes the enemy's behavior: pacing in circles or chasing the player
         if (enemyStats.idle == true)
         {
-            //Patrol Logic
+            /*/Patrol Logic
                 Vector3 moveToPoint = patrolPoints[currentPatrolPoint].position;
                 transform.position = Vector3.MoveTowards(transform.position, moveToPoint, enemyStats.walkSpeed * Time.deltaTime);
 
@@ -68,7 +68,8 @@ public class RefactorEnemy : MonoBehaviour
                     {
                         currentPatrolPoint = 0;
                     }
-                }
+                }*/
+                this.GetComponent<Patrol>().patrol();
         }
         else if (enemyStats.idle == false)
         {
@@ -129,6 +130,8 @@ public class RefactorEnemy : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         Destroy(transform.parent.gameObject);
     }
+
+    
 
 
 }
